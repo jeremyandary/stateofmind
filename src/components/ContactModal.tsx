@@ -40,6 +40,23 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
 
       if (error) throw error;
 
+      // Send email notification
+      const emailUrl = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/send-contact-email`;
+      await fetch(emailUrl, {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          company: formData.company,
+          projectType: formData.projectType,
+          message: formData.message
+        })
+      });
+
       setSubmitStatus('success');
       setFormData({
         name: '',
