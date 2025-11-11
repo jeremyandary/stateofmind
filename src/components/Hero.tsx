@@ -41,13 +41,22 @@ export default function Hero() {
     setIsHovering(false);
   };
 
-  const handleVideoClick = () => {
+  const handleVideoClick = async () => {
     if (playerRef.current) {
-      playerRef.current.setCurrentTime(0).then(() => {
-        playerRef.current.setVolume(1);
-        playerRef.current.requestFullscreen();
-        playerRef.current.play();
-      });
+      try {
+        const paused = await playerRef.current.getPaused();
+
+        if (paused) {
+          await playerRef.current.setCurrentTime(0);
+          await playerRef.current.setVolume(1);
+          await playerRef.current.requestFullscreen();
+          await playerRef.current.play();
+        } else {
+          await playerRef.current.pause();
+        }
+      } catch (error) {
+        console.error('Error controlling video:', error);
+      }
     }
   };
 
