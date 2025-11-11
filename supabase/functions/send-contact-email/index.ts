@@ -1,4 +1,5 @@
 import "jsr:@supabase/functions-js/edge-runtime.d.ts";
+import { SMTPClient } from "https://deno.land/x/denomailer@1.6.0/mod.ts";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -25,13 +26,24 @@ Deno.serve(async (req: Request) => {
   try {
     const { name, email, company, projectType, message }: ContactSubmission = await req.json();
 
-    // Using Resend API for sending emails
-    const RESEND_API_KEY = Deno.env.get('RESEND_API_KEY');
-    const YOUR_EMAIL = 'jeremy@stateofmindpro.com';
+    const GMAIL_EMAIL = Deno.env.get('GMAIL_EMAIL');
+    const GMAIL_APP_PASSWORD = Deno.env.get('GMAIL_APP_PASSWORD');
 
-    if (!RESEND_API_KEY) {
-      throw new Error('RESEND_API_KEY is not configured');
+    if (!GMAIL_EMAIL || !GMAIL_APP_PASSWORD) {
+      throw new Error('Gmail credentials not configured');
     }
+
+    const client = new SMTPClient({
+      connection: {
+        hostname: "smtp.gmail.com",
+        port: 465,
+        tls: true,
+        auth: {
+          username: GMAIL_EMAIL,
+          password: GMAIL_APP_PASSWORD,
+        },
+      },
+    });
 
     const emailHtml = `
       <h2>New Contact Form Submission</h2>
@@ -45,30 +57,19 @@ Deno.serve(async (req: Request) => {
       <p><small>Reply directly to ${email} to respond to this inquiry.</small></p>
     `;
 
-    const res = await fetch('https://api.resend.com/emails', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${RESEND_API_KEY}`,
-      },
-      body: JSON.stringify({
-        from: 'Contact Form <contact@stateofmindpro.com>',
-        to: [YOUR_EMAIL],
-        reply_to: email,
-        subject: `New Contact: ${name}${projectType ? ` - ${projectType}` : ''}`,
-        html: emailHtml,
-      }),
+    await client.send({
+      from: GMAIL_EMAIL,
+      to: GMAIL_EMAIL,
+      replyTo: email,
+      subject: `New Contact: ${name}${projectType ? ` - ${projectType}` : ''}`,
+      content: "auto",
+      html: emailHtml,
     });
 
-    if (!res.ok) {
-      const error = await res.text();
-      throw new Error(`Failed to send email: ${error}`);
-    }
-
-    const data = await res.json();
+    await client.close();
 
     return new Response(
-      JSON.stringify({ success: true, data }),
+      JSON.stringify({ success: true }),
       {
         headers: {
           ...corsHeaders,
