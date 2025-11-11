@@ -27,7 +27,7 @@ Deno.serve(async (req: Request) => {
 
     // Using Resend API for sending emails
     const RESEND_API_KEY = Deno.env.get('RESEND_API_KEY');
-    const YOUR_EMAIL = Deno.env.get('CONTACT_EMAIL') || 'your@email.com';
+    const YOUR_EMAIL = 'jeremy@stateofmindpro.com';
 
     if (!RESEND_API_KEY) {
       throw new Error('RESEND_API_KEY is not configured');
@@ -52,7 +52,7 @@ Deno.serve(async (req: Request) => {
         'Authorization': `Bearer ${RESEND_API_KEY}`,
       },
       body: JSON.stringify({
-        from: 'Contact Form <onboarding@resend.dev>',
+        from: 'Contact Form <contact@stateofmindpro.com>',
         to: [YOUR_EMAIL],
         reply_to: email,
         subject: `New Contact: ${name}${projectType ? ` - ${projectType}` : ''}`,
