@@ -33,7 +33,7 @@ const projects: Record<WorkType, Project[]> = {
     { id: '9', title: 'NAFCU', subtitle: 'Director', thumbnail: 'linear-gradient(135deg, #f857a6 0%, #ff5858 100%)', videoUrl: 'https://player.vimeo.com/video/1134482872?badge=0&autopause=0&player_id=0&app_id=58479', isFrameIo: true },
   ],
   motion: [
-    { id: '19', title: 'Motion Graphics Showreel', subtitle: 'Motion Branding', thumbnail: 'linear-gradient(135deg, #ff0844 0%, #ffb199 100%)', videoUrl: 'https://player.vimeo.com/video/1134989523?h=6bd308f7a3&badge=0&autopause=0&player_id=0&app_id=58479', isFrameIo: true },
+    { id: '19', title: 'Motion Graphics Showreel', subtitle: 'Motion Branding', thumbnail: 'linear-gradient(135deg, #ff0844 0%, #ffb199 100%)', videoUrl: 'https://player.vimeo.com/video/1134989523?hash=5d16c7a3&badge=0&autopause=0&player_id=0&app_id=58479', isFrameIo: true },
     { id: '20', title: 'Captain D\'s', subtitle: 'Motion Graphics', thumbnail: 'linear-gradient(135deg, #00d2ff 0%, #3a47d5 100%)', videoUrl: 'https://player.vimeo.com/video/1134705575?badge=0&autopause=0&player_id=0&app_id=58479', isFrameIo: true },
     { id: '21', title: 'Shoe Station', subtitle: 'Motion Graphics', thumbnail: 'linear-gradient(135deg, #f857a6 0%, #ff5858 100%)', videoUrl: 'https://player.vimeo.com/video/1134706614?badge=0&autopause=0&player_id=0&app_id=58479', isFrameIo: true },
     { id: '22', title: 'IEDC', subtitle: 'Motion Graphics', thumbnail: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)', videoUrl: 'https://player.vimeo.com/video/1134715439?badge=0&autopause=0&player_id=0&app_id=58479', isFrameIo: true },
