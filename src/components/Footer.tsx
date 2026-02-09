@@ -4,7 +4,11 @@ export default function Footer() {
   return (
     <footer className="py-16 md:py-20 px-6 bg-black border-t border-[#E0F11F]/20">
       <div className="max-w-4xl mx-auto text-center">
-        <h3 className="text-2xl md:text-3xl font-extrabold mb-2 text-white" style={{ letterSpacing: '0.5px' }}>State of Mind</h3>
+        <img
+          src="/SOM_Brain_Alpha.png"
+          alt="State of Mind"
+          className="w-24 h-24 mx-auto mb-4"
+        />
         <p className="text-white/60 font-light mb-8">
           Jeremy Andary
         </p>
