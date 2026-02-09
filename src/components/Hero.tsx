@@ -91,11 +91,11 @@ export default function Hero() {
         }`}
       >
         <img
-          src="/SOM_Brain_Logo_v1.png"
+          src="/SOM_Brain_Logo_WHT_v1.png"
           alt="State of Mind Productions"
-          className="w-full max-w-4xl mx-auto py-12 px-6 drop-shadow-[0_0_40px_rgba(224,241,31,0.3)]"
+          className="w-full max-w-7xl mx-auto py-12 px-6 drop-shadow-[0_0_60px_rgba(255,255,255,0.4)]"
           style={{
-            filter: 'brightness(1.1) contrast(1.05)'
+            filter: 'brightness(1.2) drop-shadow(0 0 80px rgba(255,255,255,0.3))'
           }}
         />
 
