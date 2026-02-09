@@ -42,7 +42,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
 
       // Send email notification
       const emailUrl = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/send-contact-email`;
-      await fetch(emailUrl, {
+      const emailResponse = await fetch(emailUrl, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`,
@@ -56,6 +56,12 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
           message: formData.message
         })
       });
+
+      if (!emailResponse.ok) {
+        const errorData = await emailResponse.json();
+        console.error('Email sending failed:', errorData);
+        throw new Error('Failed to send email notification');
+      }
 
       setSubmitStatus('success');
       setFormData({
