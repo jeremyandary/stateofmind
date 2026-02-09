@@ -90,18 +90,14 @@ export default function Hero() {
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}
       >
-        <h1
-          className="text-[12rem] md:text-[18rem] lg:text-[24rem] xl:text-[28rem] font-black py-12 w-screen"
+        <img
+          src="/SOM_Brain_Logo_v1.png"
+          alt="State of Mind Productions"
+          className="w-full max-w-4xl mx-auto py-12 px-6 drop-shadow-[0_0_40px_rgba(224,241,31,0.3)]"
           style={{
-            color: 'rgba(224, 241, 31, 0.25)',
-            textShadow: '0 0 40px rgba(224, 241, 31, 0.3)',
-            lineHeight: '0.8',
-            WebkitTextStroke: '1px rgba(224, 241, 31, 0.4)',
-            letterSpacing: '0.5px'
+            filter: 'brightness(1.1) contrast(1.05)'
           }}
-        >
-          STATE OF MIND
-        </h1>
+        />
 
         <div className="px-6">
           <p className="text-xl md:text-2xl font-light tracking-widest mb-4 text-gray-300">
