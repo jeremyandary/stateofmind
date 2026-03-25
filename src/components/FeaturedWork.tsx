@@ -16,6 +16,14 @@ interface Project {
 const projects: Record<WorkType, Project[]> = {
   directingEditing: [
     {
+      id: '0',
+      title: 'FIVE 15 COFFEE',
+      subtitle: 'Director | Editor',
+      thumbnail: 'linear-gradient(135deg, #8B4513 0%, #D2691E 100%)',
+      videoUrl: 'https://player.vimeo.com/video/1176971646?badge=0&autopause=0&player_id=0&app_id=58479',
+      isFrameIo: true
+    },
+    {
       id: '1',
       title: 'CU Link',
       subtitle: 'Director | Editor',
