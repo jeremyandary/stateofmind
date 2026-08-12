@@ -43,7 +43,7 @@ export default function Capabilities() {
                 }`}
                 style={{ transitionDelay: `${index * 150}ms` }}
               >
-                <div className="mb-6 inline-flex items-center justify-center w-14 h-14 bg-white/10 text-white group-hover:bg-[#E0F11F] group-hover:text-black transition-all duration-300">
+                <div className="mb-6 inline-flex items-center justify-center w-14 h-14 bg-white/10 text-white group-hover:bg-[#fd8471] group-hover:text-black transition-all duration-300">
                   <Icon className="w-7 h-7" />
                 </div>
                 <h3 className="text-xl md:text-2xl font-extrabold mb-4 text-white" style={{ letterSpacing: '0.5px' }}>{capability.title}</h3>

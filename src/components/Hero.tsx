@@ -108,7 +108,7 @@ export default function Hero() {
             Directed, cut, and designed — by Jeremy Andary.
           </p>
 
-          <button className="group relative inline-flex items-center gap-3 px-8 py-4 bg-white/10 backdrop-blur-sm border border-[#E0F11F]/40 rounded-full text-white font-medium tracking-wide hover:bg-[#E0F11F]/20 hover:border-[#E0F11F] transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(224,241,31,0.4)]">
+          <button className="group relative inline-flex items-center gap-3 px-8 py-4 bg-white/10 backdrop-blur-sm border border-[#fd8471]/40 rounded-full text-white font-medium tracking-wide hover:bg-[#fd8471]/20 hover:border-[#fd8471] transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(253,132,113,0.4)]">
             <Play className="w-5 h-5 fill-current" />
             <span>Play Reel</span>
           </button>

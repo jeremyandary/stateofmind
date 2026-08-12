@@ -86,7 +86,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
-      <div className="relative w-full max-w-2xl bg-zinc-900 rounded-lg shadow-2xl border border-[#E0F11F]/20">
+      <div className="relative w-full max-w-2xl bg-zinc-900 rounded-lg shadow-2xl border border-[#fd8471]/20">
         <button
           onClick={onClose}
           className="absolute top-4 right-4 text-white/60 hover:text-white transition-colors"
@@ -121,7 +121,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                 required
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                className="w-full px-4 py-3 bg-black/50 border border-white/10 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-[#E0F11F]/50 transition-colors"
+                className="w-full px-4 py-3 bg-black/50 border border-white/10 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-[#fd8471]/50 transition-colors"
                 placeholder="Your name"
               />
             </div>
@@ -136,7 +136,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                 required
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                className="w-full px-4 py-3 bg-black/50 border border-white/10 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-[#E0F11F]/50 transition-colors"
+                className="w-full px-4 py-3 bg-black/50 border border-white/10 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-[#fd8471]/50 transition-colors"
                 placeholder="your@email.com"
               />
             </div>
@@ -150,7 +150,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                 id="company"
                 value={formData.company}
                 onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                className="w-full px-4 py-3 bg-black/50 border border-white/10 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-[#E0F11F]/50 transition-colors"
+                className="w-full px-4 py-3 bg-black/50 border border-white/10 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-[#fd8471]/50 transition-colors"
                 placeholder="Optional"
               />
             </div>
@@ -163,7 +163,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                 id="projectType"
                 value={formData.projectType}
                 onChange={(e) => setFormData({ ...formData, projectType: e.target.value })}
-                className="w-full px-4 py-3 bg-black/50 border border-white/10 rounded-lg text-white focus:outline-none focus:border-[#E0F11F]/50 transition-colors"
+                className="w-full px-4 py-3 bg-black/50 border border-white/10 rounded-lg text-white focus:outline-none focus:border-[#fd8471]/50 transition-colors"
               >
                 <option value="">Select a type</option>
                 <option value="Music Video">Music Video</option>
@@ -184,7 +184,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                 rows={5}
                 value={formData.message}
                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                className="w-full px-4 py-3 bg-black/50 border border-white/10 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-[#E0F11F]/50 transition-colors resize-none"
+                className="w-full px-4 py-3 bg-black/50 border border-white/10 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-[#fd8471]/50 transition-colors resize-none"
                 placeholder="Tell me about your project, timeline, and any specific ideas you have..."
               />
             </div>
@@ -192,7 +192,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full px-8 py-4 bg-[#E0F11F] text-black font-medium text-sm tracking-wide hover:bg-[#E0F11F]/90 transition-all duration-300 hover:scale-[1.02] rounded-lg disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full px-8 py-4 bg-[#fd8471] text-black font-medium text-sm tracking-wide hover:bg-[#fd8471]/90 transition-all duration-300 hover:scale-[1.02] rounded-lg disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {isSubmitting ? 'Sending...' : 'Send Message'}
             </button>

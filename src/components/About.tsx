@@ -33,7 +33,7 @@ export default function About() {
               </div>
               <button
                 onClick={() => setIsModalOpen(true)}
-                className="group mt-10 inline-flex items-center gap-3 px-8 py-3 bg-[#E0F11F] text-black font-medium text-sm tracking-wide hover:bg-[#E0F11F]/90 transition-all duration-300 hover:scale-105 rounded-full"
+                className="group mt-10 inline-flex items-center gap-3 px-8 py-3 bg-[#fd8471] text-black font-medium text-sm tracking-wide hover:bg-[#fd8471]/90 transition-all duration-300 hover:scale-105 rounded-full"
               >
                 <span>Let's Work Together</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

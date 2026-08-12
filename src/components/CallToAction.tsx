@@ -29,7 +29,7 @@ export default function CallToAction() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <button
               onClick={() => setIsModalOpen(true)}
-              className="group inline-flex items-center gap-3 px-8 py-3 bg-[#E0F11F] text-black font-medium text-sm tracking-wide hover:bg-[#E0F11F]/90 transition-all duration-300 hover:scale-105 rounded-full"
+              className="group inline-flex items-center gap-3 px-8 py-3 bg-[#fd8471] text-black font-medium text-sm tracking-wide hover:bg-[#fd8471]/90 transition-all duration-300 hover:scale-105 rounded-full"
             >
               <span>Start a Project</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -37,7 +37,7 @@ export default function CallToAction() {
 
             <button
               onClick={scrollToTop}
-              className="group inline-flex items-center gap-3 px-8 py-3 bg-white/10 backdrop-blur-sm border border-[#E0F11F]/30 text-white font-medium text-sm tracking-wide hover:bg-[#E0F11F]/10 hover:border-[#E0F11F]/50 transition-all duration-300 rounded-full"
+              className="group inline-flex items-center gap-3 px-8 py-3 bg-white/10 backdrop-blur-sm border border-[#fd8471]/30 text-white font-medium text-sm tracking-wide hover:bg-[#fd8471]/10 hover:border-[#fd8471]/50 transition-all duration-300 rounded-full"
             >
               <Play className="w-4 h-4 fill-current" />
               <span>Watch My Reel</span>

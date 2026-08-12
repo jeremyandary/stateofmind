@@ -73,7 +73,7 @@ export default function FeaturedWork() {
               onClick={() => setActiveTab('directingEditing')}
               className={`px-6 py-2 text-sm font-medium tracking-wide transition-all duration-300 rounded-full ${
                 activeTab === 'directingEditing'
-                  ? 'bg-[#E0F11F] text-black'
+                  ? 'bg-[#fd8471] text-black'
                   : 'bg-white/5 text-white/70 hover:bg-white/10 hover:text-white border border-white/10'
               }`}
             >
@@ -83,7 +83,7 @@ export default function FeaturedWork() {
               onClick={() => setActiveTab('motion')}
               className={`px-6 py-2 text-sm font-medium tracking-wide transition-all duration-300 rounded-full ${
                 activeTab === 'motion'
-                  ? 'bg-[#E0F11F] text-black'
+                  ? 'bg-[#fd8471] text-black'
                   : 'bg-white/5 text-white/70 hover:bg-white/10 hover:text-white border border-white/10'
               }`}
             >
