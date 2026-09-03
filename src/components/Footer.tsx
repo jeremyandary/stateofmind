@@ -13,7 +13,7 @@ export default function Footer() {
           Jeremy Andary
         </p>
         <p className="text-sm text-white/40 mb-8 tracking-wide">
-          Shoot. Cut. Create.
+          Build. Create. Grow.
         </p>
 
         <div className="flex flex-wrap justify-center gap-8 mb-8 text-sm">

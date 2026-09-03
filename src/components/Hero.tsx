@@ -101,7 +101,7 @@ export default function Hero() {
 
         <div className="px-6">
           <p className="text-xl md:text-2xl font-light tracking-widest mb-4 text-gray-300">
-            Shoot. Cut. Create.
+            Build. Create. Grow.
           </p>
 
           <p className="text-base md:text-lg font-light mb-12 text-gray-400 max-w-2xl mx-auto">
