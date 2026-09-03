@@ -91,7 +91,7 @@ export default function Hero() {
         }`}
       >
         <img
-          src="/SOM_Brain_Logo_WHT_v1.png"
+          src="/SOM_Brain_Logo_v2_WHT.png"
           alt="State of Mind Productions"
           className="w-full max-w-7xl mx-auto py-12 px-6 drop-shadow-[0_0_60px_rgba(255,255,255,0.4)]"
           style={{
